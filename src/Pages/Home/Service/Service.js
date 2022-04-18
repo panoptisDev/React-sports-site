@@ -32,4 +32,3 @@ const Service = ({ service }) => {
 export default Service;
 
 
-// onClick={ () => NavigateToServiceDetail(id)}

@@ -1,24 +1,37 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import About from './Pages/About/About';
-import Home from './Pages/Home/Home/Home';
-import Footer from './Pages/Shared/Footer/Footer';
-import Header from './Pages/Shared/Header/Header';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import About from "./Pages/About/About";
+import Checkout from "./Pages/Checkout/Checkout";
+import Home from "./Pages/Home/Home/Home";
+import Login from "./Pages/Login/Login";
+import RequireAuth from "./Pages/RequireAuth/RequireAuth";
+import ServiceDetails from "./Pages/ServiceDetails/ServiceDetails";
+import Footer from "./Pages/Shared/Footer/Footer";
+import Header from "./Pages/Shared/Header/Header";
 
 function App() {
   return (
-    <div className='container-fluid'>
-
+    <div className="container-fluid">
       <Header></Header>
       <Routes>
         {/* <Route path='/' element={}></Route> */}
-        <Route path='/' element={<Home></Home>}></Route>
-        {/* <Route path='/' element={}></Route> */}
-        {/* <Route path='/' element={}></Route> */}
-        <Route path='/about' element={<About></About>}></Route>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route
+          path="/service/:serviceId"
+          element={<ServiceDetails></ServiceDetails>}
+        ></Route>
+        <Route
+          path="/checkout"
+          element={
+            <RequireAuth>
+              <Checkout></Checkout>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route path="/about" element={<About></About>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
       </Routes>
       <Footer></Footer>
-
     </div>
   );
 }

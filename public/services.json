@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Player Individual",
+        "price": "$300",
+        "description": "In this package I take picture of individual player.It can be portrait of a player or picture of him in a match or any occasion he participate. ",
+        "img": "https://i.ibb.co/VMZY1Mc/gavi.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Single Match",
+        "price": "$500",
+        "description": "Need to take picture of a full match.In this package i take picture of everything. players photo, fan, pre-match presentation, post-match presentation and in game moments",
+        "img": "https://i.ibb.co/R61tKry/messi.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Whole tournament",
+        "price": "$1000",
+        "description": "In this package i will be available for whole tournament. I will take picture of everything organizer wants me take related to sports.",
+        "img": "https://i.ibb.co/f47Rx4F/wc.jpg"
+    }
+]

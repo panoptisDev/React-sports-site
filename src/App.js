@@ -7,7 +7,7 @@ import Header from './Pages/Shared/Header/Header';
 
 function App() {
   return (
-    <div className='container'>
+    <div className='container-fluid'>
 
       <Header></Header>
       <Routes>

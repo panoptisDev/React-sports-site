@@ -23,7 +23,10 @@ const Blogs = () => {
               user.Authentication is visible to and user can partially change
               it.
               <br />
-              In Authorization it determines what resources a user can access.Authorization always takes place after authentication.Authorization is not visible to or changeable by the user.
+              In Authorization it determines what resources a user can
+              access.Authorization always takes place after
+              authentication.Authorization is not visible to or changeable by
+              the user.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -38,8 +41,10 @@ const Blogs = () => {
           </Card.Header>
           <Card.Body>
             <Card.Text>
-              At this moment i am using firebase authentication.Like google,email,github etc sign in,authentication,reset password 
-              we can use firebase for Cloud Messaging, hosting, realtime database, storage etc
+              At this moment i am using firebase authentication.Like
+              google,email,github etc sign in,authentication,reset password .
+              For authentication we can use other than firebase are parse,
+              back4App, AWS Amplify, Backendless, kuzzle etc.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -53,8 +58,10 @@ const Blogs = () => {
           </Card.Header>
           <Card.Body>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Firebase provide authentication.It also provide many other
+              services. we can use firebase for Cloud Messaging, hosting,
+              realtime database, storage,Test lab, Crash Reporting, Remote
+              Configuration etc for deliver web content faster,store and sync data in real time, keep our data stable, for make easy file storing
             </Card.Text>
           </Card.Body>
         </Card>

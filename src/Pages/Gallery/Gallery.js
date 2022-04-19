@@ -8,7 +8,7 @@ import photo6 from "../../images/gallery/photo6.jpg";
 
 const Gallery = () => {
   return (
-    <div className="container">
+    <div id="gallery" className="container">
       <h2 className="text-primary my-5 mx-auto text-center">Gallery</h2>
 
       <div className="row row-cols-1 row-cols-md-3 g-2 p-1">

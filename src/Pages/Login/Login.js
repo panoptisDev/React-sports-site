@@ -1,9 +1,13 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import { async } from "@firebase/util";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -15,6 +19,8 @@ const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
@@ -25,17 +31,27 @@ const Login = () => {
     console.log(email, password);
   };
 
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    
+      await sendPasswordResetEmail(email);
+     alert('mail sent')
+    
+  };
+
   const navigateRegister = (event) => {
     navigate("/register");
   };
 
-
   if (user) {
     navigate(from, { replace: true });
+    console.log(user)
   }
 
-
-
+  let errorElement;
+  if (error) {
+    errorElement = <p className="text-danger">Error: {error?.message}</p>;
+  }
 
   return (
     <div className="container  mx-auto">
@@ -62,6 +78,7 @@ const Login = () => {
           Login
         </Button>
       </Form>
+      {errorElement}
       <p className="w-50 mx-auto my-2">
         New to genius car{" "}
         <Link
@@ -71,6 +88,16 @@ const Login = () => {
         >
           Please Register
         </Link>
+      </p>
+      <p className="  w-50 mx-auto my-2">
+        Forget password..?
+        <button
+          to="/register"
+          className="btn btn-link text-primary text-decoration-none "
+          onClick={resetPassword}
+        >
+          Send Email
+        </button>
       </p>
       <SocialLogin></SocialLogin>
     </div>

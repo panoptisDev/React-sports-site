@@ -17,8 +17,13 @@ const Blogs = () => {
           </Card.Header>
           <Card.Body>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Authentication verifies who the user is.We use authentication
+              through passwords, one-time pins, biometric information, and other
+              information which are provided or entered by the
+              user.Authentication is visible to and user can partially change
+              it.
+              <br />
+              In Authorization it determines what resources a user can access.Authorization always takes place after authentication.Authorization is not visible to or changeable by the user.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -33,8 +38,8 @@ const Blogs = () => {
           </Card.Header>
           <Card.Body>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              At this moment i am using firebase authentication.Like google,email,github etc sign in,authentication,reset password 
+              we can use firebase for Cloud Messaging, hosting, realtime database, storage etc
             </Card.Text>
           </Card.Body>
         </Card>

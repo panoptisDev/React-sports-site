@@ -26,7 +26,7 @@ const Register = () => {
     
 
 
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth)
+    const [updateProfile, updating] = useUpdateProfile(auth)
 
 
     if(loading || updating){

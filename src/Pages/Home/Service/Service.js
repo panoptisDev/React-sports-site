@@ -22,7 +22,7 @@ const Service = ({ service }) => {
           </p>
         </div>
         <div className=" rounded mx-auto text-center w-100">
-        <button onClick={() => navigateToServiceDetails(id)} className='btn-book text-white rounded p-2 mx-auto w-100'>Book</button>
+        <button onClick={() => navigateToServiceDetails(id)} className='btn-book text-white fs-5 rounded p-2 mx-auto w-100'>Book</button>
         </div>
       </div>
     </div>

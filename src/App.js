@@ -13,7 +13,7 @@ import NotFound from "./Pages/Shared/NotFound/NotFound";
 
 function App() {
   return (
-    <div className="container-fluid">
+    <div className="App container-fluid">
       <Header></Header>
       <Routes>
         {/* <Route path='/' element={}></Route> */}

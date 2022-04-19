@@ -1,8 +1,8 @@
 .btn-book{
-    background-color: #16f0c8;
+    background-color: #0c3c33;
     border-color: #357ebd;
 }
 .btn-book:hover, .btn-book:focus, .btn-book:active, .btn-book.active, .open>.dropdown-toggle.btn-book{
-    background-color: #4791ff;
+    background-color: #276a67;
     border-color: #285e8e;
 }

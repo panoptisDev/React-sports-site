@@ -8,6 +8,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { async } from "@firebase/util";
+import Loading from "../Shared/Loading/Loading";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const emailRef = useRef("");
@@ -33,19 +36,26 @@ const Login = () => {
 
   const resetPassword = async () => {
     const email = emailRef.current.value;
-    
+    if (email) {
       await sendPasswordResetEmail(email);
-     alert('mail sent')
-    
+      toast("Sent!  Check your mail");
+    }
+    else{
+        toast('Please enter your email')
+    }
   };
 
   const navigateRegister = (event) => {
     navigate("/register");
   };
 
+  if (loading || sending) {
+    return <Loading></Loading>;
+  }
+
   if (user) {
     navigate(from, { replace: true });
-    console.log(user)
+    console.log(user);
   }
 
   let errorElement;
@@ -92,14 +102,14 @@ const Login = () => {
       <p className="  w-50 mx-auto my-2">
         Forget password..?
         <button
-          to="/register"
           className="btn btn-link text-primary text-decoration-none "
           onClick={resetPassword}
         >
-          Send Email
+          Reset password
         </button>
       </p>
       <SocialLogin></SocialLogin>
+      <ToastContainer />
     </div>
   );
 };

@@ -26,14 +26,14 @@
 
 
 
-## github link
+## Github link
 
-Click here to view [Github link]()
-
-## Netlify live site link
-
-Visit the website [Netlify link]()
+Click here to view [Github link](https://github.com/programming-hero-web-course-4/independent-service-provider-shafiul-naim)
 
 ## Firebase live site link
 
-Visit the website [Firebase link]()
+Visit the website [Firebase link](https://assignment-10-1e27c.web.app/)
+
+## Netlify live site link
+
+Visit the website [Netlify link](https://effervescent-kataifi-0d6a31.netlify.app/)

@@ -17,8 +17,8 @@ const Service = ({ service }) => {
           <p className="card-text">
             {description}
           </p>
-          <p className="card-text">
-            {price}
+          <p className="card-text">Price: 
+            <span className="fw-bold">{price}</span>
           </p>
         </div>
         <div className=" rounded mx-auto text-center w-100">

@@ -3,6 +3,6 @@
     border-color: #357ebd;
 }
 .btn-book:hover, .btn-book:focus, .btn-book:active, .btn-book.active, .open>.dropdown-toggle.btn-book{
-    background-color: #276a67;
-    border-color: #285e8e;
+    background-color: #034441;
+    border-color: #00070e;
 }
